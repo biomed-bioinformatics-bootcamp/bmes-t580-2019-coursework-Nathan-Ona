@@ -16,9 +16,9 @@ X = 2
 user_name = input('What is your name?')
 print('Hello ' + user_name)
 # temporary value to enter the while loop for the game to start
-guess = 'QWERT'
+user_guess = 'QWERT'
 # checks if the guess value is less than the chosen random number
-while guess != DNA_goal:
+while user_guess != DNA_goal:
     # asks use for their guess at the random 5 base pair primer
     user_guess = input('please enter a 5 base pair primer ')
     # checks if the user guess is equal to the random base primer, otherwise outputs that the user guess
@@ -28,6 +28,6 @@ while guess != DNA_goal:
         if user_guess[i] != DNA_goal[i]:
             misses += 1
     if misses > 0:
-        print('Sorry, your guessed %I bases wrong. Play Again?' % misses)
+        print('Sorry, your guessed %i bases wrong. Play Again?' % misses)
     else:
         print('Good job' + user_name + ', your guessed the Primer!')
